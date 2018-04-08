@@ -8,8 +8,17 @@ div.header
     ul
       li Products
       li History Order
-      li Login
-      li Logout
-      li Sign Up
+      - if !user_signed_in?
+        li 
+          = link_to new_user_session_path do 
+            span Login
+        li 
+          = link_to new_user_registration_path do
+            span Sign Up    
+      - else
+        li 
+          = link_to destroy_user_session_path, method: :delete, title: 'Logout' do
+            span  Logout
+      
   div.clear
 
