@@ -1,12 +1,14 @@
 div.header
-  div.col-lg-3
+  div.col-sm-3.col-md-3.col-lg-3
     ul
       li
         = link_to root_path do 
           span Home    
-  div.col-lg-9.text-right          
+  div.col-sm-3.col-md-9.col-lg-9.text-right          
     ul
-      li Products
+      li 
+        = link_to products_path do
+          span Products
       li History Order
       - if !user_signed_in?
         li 

@@ -1,0 +1,16 @@
+div.container
+  div.row.product-detail
+    div.col-lg-5
+      div.image-product
+        = image_tag("#{@product.image}")
+    div.col-lg-7
+      p.name-product
+        strong
+          = @product.name
+      p.product-price 
+        strong Price: 
+        | $
+        = @product.price  
+      p.product-description
+        = @product.description    
+      p Add to Cart      

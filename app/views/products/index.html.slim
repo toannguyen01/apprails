@@ -1,0 +1,8 @@
+div.container
+  center
+    h1 All Products
+  - @products.each do |product|
+    = render 'products', product: product
+  div.clear
+    center
+      = paginate @products
