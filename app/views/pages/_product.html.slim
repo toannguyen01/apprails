@@ -1,0 +1,10 @@
+div.col-sm-6.col-md-4.col-lg-4.box-product
+  div.product
+    p.product-image = image_tag("#{product.image}")
+    p.product-name 
+      strong = product.name.truncate(50)
+    p.product-price 
+      strong Price: 
+      | $
+      = product.price
+    p Add to Cart  
