@@ -10,7 +10,7 @@ div.col-lg-3
             = render 'share/category', category: category
 div.col-lg-9
   - @products.each do |product|
-    = render 'share/product', product: product
+    = render 'share/product', product: product, order_item: @order_item
   div.clear
     center
       = paginate @products

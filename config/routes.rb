@@ -6,5 +6,7 @@ Rails.application.routes.draw do
     resources :products
   end
   resources :products
+  resources :order_items, only: [:create, :update, :destroy]
+  resource :cart, only: [:show]
   root "pages#index"
 end

@@ -8,8 +8,10 @@ div.header
     ul
       li 
         = link_to products_path do
-          span Products
-      li History Order
+          span Products 
+      li
+        h1.cart-header.cart-text
+          = render "layouts/cart_text"     
       - if !user_signed_in?
         li 
           = link_to new_user_session_path do 
@@ -18,6 +20,7 @@ div.header
           = link_to new_user_registration_path do
             span Sign Up    
       - else
+        li History Order
         li
           = link_to edit_user_registration_path do
             = image_tag avatar_url(current_user), class: 'avatar-user'
