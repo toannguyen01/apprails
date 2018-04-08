@@ -11,3 +11,6 @@ div.col-lg-3
 div.col-lg-9
   - @products.each do |product|
     = render 'share/product', product: product
+  div.clear
+    center
+      = paginate @products
