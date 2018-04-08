@@ -15,7 +15,7 @@
 
 /node_modules
 /yarn-error.log
-
+/test/*
 .byebug_history
 *.env
 Gemfile.lock

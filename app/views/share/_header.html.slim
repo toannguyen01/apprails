@@ -16,6 +16,10 @@ div.header
           = link_to new_user_registration_path do
             span Sign Up    
       - else
+        li
+          = link_to edit_user_registration_path do
+            = image_tag avatar_url(current_user), class: 'avatar-user'
+            span.name-user = current_user.name      
         li 
           = link_to destroy_user_session_path, method: :delete, title: 'Logout' do
             span  Logout
