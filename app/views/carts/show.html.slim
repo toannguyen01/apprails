@@ -1,5 +1,8 @@
 div.shopping-cart
   = render "shopping_cart" 
+div.clear 
+  center
+    = paginate @order_items  
 - if user_signed_in? 
   - if current_order.order_items.size > 0
     p 
