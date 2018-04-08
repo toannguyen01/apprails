@@ -1,0 +1,8 @@
+div.container
+  - @order_history.each do |order|
+    = render "history", order: order
+center
+  - if @order.finished
+    p.center This order finished !!!
+  - else
+    = link_to 'Checkout', order_path(@order.id)  

@@ -1,0 +1,24 @@
+div.container.history_order
+  - @order_histories.each do |order|
+    div class="box #{order.finished}" 
+      div
+        p.text-center Information Order
+      div.row.info_order.text-center
+        - if order.name
+          div.col-lg-4.info 
+            | Name : #{order.name}
+        - if order.address
+          div.col-lg-4.info   
+            | Address : #{order.address}
+        - if order.phone
+          div.col-lg-4.info  
+            | Phone : #{order.phone}        
+      div.info-history  
+        p 
+        | Order ID :  
+        = order.id 
+        = link_to ' info order ', history_path(order)
+
+  div.clear 
+    center
+      = paginate @order_histories      

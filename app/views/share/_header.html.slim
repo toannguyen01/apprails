@@ -20,7 +20,9 @@ div.header
           = link_to new_user_registration_path do
             span Sign Up    
       - else
-        li History Order
+        li 
+          = link_to histories_path do 
+            span History Order
         li
           = link_to edit_user_registration_path do
             = image_tag avatar_url(current_user), class: 'avatar-user'
