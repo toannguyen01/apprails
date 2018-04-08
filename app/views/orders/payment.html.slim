@@ -1,0 +1,21 @@
+div.container
+  div.rows
+    p 
+      | Name : 
+      = @order.name
+    p 
+      | Address : 
+      = @order.address
+    p 
+      | Phone :     
+      = @order.phone
+
+
+p.text-center
+  input action="action" onclick="window.history.go(-1); return false;" type="button" value="Go Back" 
+p.text-center
+  - if !params[:paymentId].nil?
+    a.btn.btn-info href="#{execute_order_path(params[:id],paymentId: params[:paymentId])}"  Confirm
+  - else
+    a data-method="#{@payment.links[1].method}" href="#{@payment.links[1].href}" 
+      img alt="" src="http://ozzyjames.co.uk/wp-content/uploads/2016/01/paypal-icon-copy.jpg" width="150px" /   

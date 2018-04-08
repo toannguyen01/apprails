@@ -1,0 +1,12 @@
+div.container
+  h2 Infomation Order
+  = semantic_form_for @order do |f|
+    div.info-order
+      .form-group
+        = f.input :name, input_html: { class: 'form-control' }
+      .form-group
+        = f.input :phone, input_html: { class: 'form-control' }
+      .form-group
+        = f.input :address, input_html: { class: 'form-control' }
+      .form-group
+        = f.button :submit, class:"btn btn-success form-control"

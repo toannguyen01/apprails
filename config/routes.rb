@@ -5,6 +5,12 @@ Rails.application.routes.draw do
   resources :categories do
     resources :products
   end
+  resources :orders do
+    member do
+     get 'payment'
+     get 'execute'
+    end
+  end
   resources :products
   resources :order_items, only: [:create, :update, :destroy]
   resource :cart, only: [:show]

@@ -1,0 +1,13 @@
+div.shopping-cart
+  = render "shopping_cart" 
+- if user_signed_in? 
+  - if current_order.order_items.size > 0
+    p 
+      center
+        = link_to order_path(current_order) do
+          span Order
+- else
+  p 
+    center
+      = link_to new_user_session_path do
+        span Login to Order
