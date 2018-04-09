@@ -5,8 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Product.destroy_all
-Category.destroy_all
+# Product.destroy_all
+# Category.destroy_all
 
   require 'time'
   require 'uri'
@@ -32,7 +32,7 @@ Category.destroy_all
       "AWSAccessKeyId" => "AKIAIONONMVS5BPD3WDQ",
       "AssociateTag" => " storetestapp-20",
       "SearchIndex" => "All",
-      "Keywords" => "Samsung phone",
+      "Keywords" => "HTC phone",
       "ResponseGroup" => "Accessories,ItemAttributes,Large,Offers"
     }
 
@@ -59,7 +59,7 @@ Category.destroy_all
     product_item = product
 
     end
-    category = Category.create(title: 'Samsung phone')
+    category = Category.create(title: 'HTC phone')
 
     product_item["ItemSearchResponse"]["Items"]["Item"].each do |item|
 
