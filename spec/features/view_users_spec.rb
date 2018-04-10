@@ -1,5 +1,4 @@
 require 'rails_helper'
-require 'features/sign_in'
 
 describe 'View User', type: :feature do
 
